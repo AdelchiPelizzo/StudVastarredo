@@ -5,11 +5,16 @@
 trigger LeadTriggerMain on Lead (after insert, after update, before update, before insert) {
     System.debug('Lead Trigger ....');
 
-    List<Lead> leadList = new List<Lead>();
-    List<>
+    if( Trigger.isInsert && Trigger.isAfter){
+        for ( Lead l : Trigger.new){
+//            if (l.LeadSource.contains('web')) {
+                List<Lead> leadList = new List<Lead>();
+                leadList.add(l);
+                Utilities.sendPublicLink(leadList);
+//            }
 
-    for (Lead l : Trigger.new) {
-        System.debug(l.Prodotto_di_interesse__c);
+        }
+
     }
 
 }
