@@ -4,7 +4,7 @@
 
 <!-- Display Map -->
 <template>
-    <lightning-map map-markers={mapMarkers} center={center} title="Indirizzi" markers-title="Leads & Clienti"> </lightning-map>
+    <lightning-map map-markers={mapMarkers} center={center} title="Indirizzi" markers-title="Leads & Clienti" zoom-level={zoomLevel} > </lightning-map>
     <lightning-button onclick={showMyLocation} label="show My location" title="show my location"></lightning-button>
     <lightning-button onclick={showMyLocationMobile} label="show My location Mobile" title="show my location"></lightning-button>
 </template>

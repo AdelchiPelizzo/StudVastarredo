@@ -16,6 +16,7 @@ export default class DisplayMap extends LightningElement {
 
     directionsListWired = [];
     mapMarkers = [];
+    zoomLevel = 15;
     center;
 
    connectedCallback() {
@@ -70,7 +71,7 @@ export default class DisplayMap extends LightningElement {
                                        scale: .10,
                                    },
                   icon: 'standard:account',
-                  title: direction.name
+                  title: direction.name,
                };
            }else if (direction.type == 'L') {
                return {
